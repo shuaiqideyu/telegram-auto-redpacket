@@ -1,0 +1,36 @@
+# 环境与凭据
+.env
+*.session
+*.session-journal
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 前端
+node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+
+# 本地数据 / 调试
+debug/
+data/
+log.txt
+*.log
+.DS_Store
+
+# IDE / 编辑器
+.idea/
+.vscode/
+*.swp
+
+# AI / 私密 / 本地笔记（不开源）
+.cursor/
+progress.md
+progress-archive.md
+HANDOFF.md
+STRUCTURE.md
+红包监控.py

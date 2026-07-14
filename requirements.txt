@@ -1,0 +1,17 @@
+telethon>=1.43.0
+python-socks[asyncio]>=2.4.0   # 账号代理（Telethon proxy，仅配置代理时生效）
+python-dotenv>=1.0.0
+openai>=1.40.0
+playwright>=1.47.0
+httpx>=0.27.0
+redis>=5.0.0
+cryptography>=43.0.0
+# 可选：反检测浏览器内核（BROWSER_BACKEND=cloak 时启用，OKPay 上反爬再装）
+# cloakbrowser>=0.3.0
+
+# Web 后端
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+sqlalchemy[asyncio]>=2.0.30
+asyncpg>=0.29.0
+pydantic>=2.7.0
