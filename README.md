@@ -1,17 +1,17 @@
-# Telegram 自动抢红包 v0.2 学习版
+# Telegram 自动抢红包
+
+多账号 Telegram 红包自动监听、识别与领取系统（**v0.2 学习版**），附 Web 管理控制台。
+
+检测到群组 / 频道中的红包后，按类型分流到对应领取模块（关键词、窗口/私信验证码、网页验证、福利来等）；支持多账号并发、策略过滤、群组级开关与战绩统计。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
-[![Release](https://img.shields.io/github/v/release/shuaiqideyu/telegram-auto-redpacket?include_prereleases&label=release)](https://github.com/shuaiqideyu/telegram-auto-redpacket/releases)
-[![GitHub stars](https://img.shields.io/github/stars/shuaiqideyu/telegram-auto-redpacket?style=social)](https://github.com/shuaiqideyu/telegram-auto-redpacket/stargazers)
 
-多账号 Telegram 红包自动监听、识别与领取系统，附带 Web 管理控制台。
-
-检测到群组 / 频道中的红包后，按类型自动分流到对应领取模块；支持多账号并发、策略过滤、群组级开关与战绩统计。当前版本 **v0.2 学习版**。
+**作者**：[Telegram @yuuu](https://t.me/yuuu)
 
 ---
 
-## 能做什么
+## 功能特性
 
 | 能力 | 说明 |
 |---|---|
@@ -278,3 +278,5 @@ cd frontend && npm ci && npm run build && cd ..
 ## License
 
 [MIT](./LICENSE)
+
+**作者**：[Telegram @yuuu](https://t.me/yuuu)
