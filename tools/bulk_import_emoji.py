@@ -21,20 +21,24 @@ KNOWN_PACKS = []
 
 
 async def _load_packs_from_log():
-    """从日志文件中提取所有包名。"""
+    """从本机 Cursor 终端日志提取包名。目录按本机项目扫描，不写死用户名。"""
     import os, re
-    terms_dir = os.path.expanduser("~/.cursor/projects/Users-04by-Desktop-okpay/terminals")
+    base = os.path.expanduser("~/.cursor/projects")
     packs = set()
-    if not os.path.isdir(terms_dir):
+    if not os.path.isdir(base):
         return packs
-    for f in os.listdir(terms_dir):
-        if not f.endswith(".txt"):
+    for project in os.listdir(base):
+        terms_dir = os.path.join(base, project, "terminals")
+        if not os.path.isdir(terms_dir):
             continue
-        try:
-            content = open(os.path.join(terms_dir, f), errors="ignore").read()
-            packs.update(re.findall(r"ok\d+_by_okstickerbot|kkpay[A-Za-z0-9]*", content))
-        except Exception:
-            pass
+        for f in os.listdir(terms_dir):
+            if not f.endswith(".txt"):
+                continue
+            try:
+                content = open(os.path.join(terms_dir, f), errors="ignore").read()
+                packs.update(re.findall(r"ok\d+_by_okstickerbot|kkpay[A-Za-z0-9]*", content))
+            except Exception:
+                pass
     return packs
 
 
